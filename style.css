@@ -385,3 +385,66 @@ footer p {
         transition: none;
     }
 }
+```css
+/* Sekcja tekstu i godzin otwarcia */
+
+.intro.section {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-text {
+    max-width: 600px;
+}
+
+.opening-hours {
+    padding: 28px;
+    border: 1px solid rgba(215, 180, 106, 0.35);
+    background: #111;
+    border-radius: 12px;
+}
+
+.opening-hours h3 {
+    color: #fff;
+    font-size: 25px;
+    margin: 0 0 20px;
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #eee;
+    font-size: 14px;
+}
+
+.hours-row:last-child {
+    border-bottom: none;
+}
+
+.hours-row span:last-child {
+    white-space: nowrap;
+    color: #d7b46a;
+}
+
+.hours-row .closed {
+    color: #999;
+}
+
+/* Układ na telefonie */
+
+@media (max-width: 700px) {
+    .intro.section {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .opening-hours {
+        padding: 20px;
+    }
+}
